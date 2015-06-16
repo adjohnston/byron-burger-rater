@@ -1,0 +1,14 @@
+//  layout : generic
+//  ----------------
+
+//  main
+//  ----
+    main {
+      margin-top: 100vh;
+      padding-top: gap();
+
+      background-color: $white;
+
+      position: relative;
+      z-index: 1;
+    }

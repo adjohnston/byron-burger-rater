@@ -1,0 +1,32 @@
+//  default : theme
+//  ---------------
+
+    .byron {
+      overflow: hidden;
+
+      .vote, .byron__thumb, .address {
+        float: left;
+      }
+
+      .address {
+        width: calc(100% - #{gap(9)});
+      }
+    }
+
+
+//  footer
+//  ------
+    footer {
+      background-color: $white;
+      
+      position: relative;
+      z-index:  1;
+
+      > small {
+        @include text-size(0.75);
+
+        padding: gap(0.5) gap();
+        text-align: right;
+        display: block;
+      }
+    }

@@ -1,0 +1,10 @@
+//  list : generic
+//  --------------
+
+    ul, ol {
+      margin: 0 0 gap();
+    }
+
+    li {
+      line-height: initial;
+    }

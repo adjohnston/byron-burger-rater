@@ -1,0 +1,25 @@
+//  colours : variables : utilities
+//  ===============================
+
+//  base
+//  ----
+    $white:      #fff    !default;
+    $light-grey: #ddd    !default;
+    $grey:       #ccc    !default;
+    $dark-grey:  #333    !default;
+    $black:      #000    !default;
+    $blue:       #315472 !default;
+    $green:      #a0b046 !default;
+    $red:        #f24e4e !default;
+    $yellow:     #f2c94e !default;
+
+
+//  body
+//  ----
+    $body-bg:         $white;
+    
+    $body-text:       $dark-grey;
+    $body-link:       lighten($dark-grey, 10%);
+    
+    $body-text-light: $white;
+    $body-link-light: darken($white, 10%);

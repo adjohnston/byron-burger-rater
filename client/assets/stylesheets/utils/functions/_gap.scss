@@ -1,0 +1,6 @@
+//  gap : functions : utilities
+//  ===========================
+
+    @function gap($mul: 1, $px-offset: 0px) {
+      @return ($base-line-height + ($px-offset / $base-font-size)) * $mul + rem;
+    }

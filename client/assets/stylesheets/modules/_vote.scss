@@ -1,0 +1,44 @@
+//  vote : modules
+//  --------------
+
+//  vote wrapper
+//  ------------
+    .vote {
+      padding-right: gap();
+
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    //  vote __ up
+    //  ----------
+        .vote__up:hover {
+          color: $green;
+        }
+
+    //  vote __ down
+    //  ------------
+        .vote__down:hover {
+          color: $red;
+        }
+
+    //  vote __ children
+    //  ----------------
+        .vote__up,
+        .vote__down {
+          cursor: pointer;
+
+          -webkit-transition: color 0.3s;
+             -moz-transition: color 0.3s;
+                  transition: color 0.3s;
+        }
+
+        .vote__up,
+        .vote__count,
+        .vote__down {
+          @include text-size(2);
+
+          width: gap(2);
+          text-align: center;
+          display: block;
+        }

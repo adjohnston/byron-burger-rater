@@ -1,0 +1,33 @@
+<template name="index">
+
+<main id="byrons" role="main">
+  <ul class="byrons block-list">
+  {{#each byrons}}
+
+    <li class="byron" data-byron="{{_id}}">
+      <div class="vote">
+        <span class="vote__up">&#9650;</span>
+        <span class="vote__count">{{formattedVotes}}</span>
+        <span class="vote__down">&#9660;</span>
+      </div>
+
+      <img class="byron__thumb" src="{{photo}}" alt="Byron">
+
+      <ul class="address">
+      {{#each address}}
+        
+        {{> address line=this}}
+      
+      {{/each}}
+      </ul>
+    </li>
+
+  {{else}}
+
+    <li class="byron__loading">Restaurants are loading…</li>
+
+  {{/each}}
+  </ul>
+</main>
+
+</template>

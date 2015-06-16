@@ -1,0 +1,7 @@
+{
+  "useIndex" : true,
+  "indexFilePath" : "client/assets/stylesheets/app.scss",
+  "includePaths": [
+    ".meteor/local/bower/bootstrap-sass/assets/stylesheets"
+  ]
+}

@@ -1,0 +1,33 @@
+//  address : modules
+//  -----------------
+
+//  adress wrapper
+//  --------------
+    .address {
+      padding-left: gap();
+      
+      list-style: none;
+
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    //  address __ line
+    //  ---------------
+        .address__line {
+          &:first-child {
+            @include text-size(1.25);
+
+            font-family: "didact gothic", "helvetica neue", helvetica, arial, sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+          }
+
+          &:after {
+            content: ",";
+          }
+
+          &:last-child:after {
+            content: "";
+          }
+        }

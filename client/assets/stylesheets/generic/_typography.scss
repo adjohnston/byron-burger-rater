@@ -1,0 +1,10 @@
+//  typography : generic
+//  --------------------
+
+//  headers
+//  -------
+    @for $n from 1 through 6 {
+      h#{$n} {
+        margin: 0 0 gap();
+      }
+    }
