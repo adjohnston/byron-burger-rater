@@ -1,6 +1,6 @@
 //  byrons : publications
 //  ---------------------
 
-    Meteor.publish('allByrons', function () {
+    Meteor.publish('byrons', function () {
       return Byrons.find();
     });
