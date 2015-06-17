@@ -8,3 +8,27 @@
         margin: 0 0 gap();
       }
     }
+
+
+//  paragraph
+//  ---------
+    p {
+      margin: 0 0 gap();
+    }
+
+
+//  link
+//  ----
+    a {
+      font-weight: bold;
+      color: $body-text;
+
+      -webkit-transition: color 0.2s;
+         -moz-transition: color 0.2s;
+              transition: color 0.2s;
+
+      &:hover {
+        text-decoration: none;
+        color: lighten($body-text, 20%);
+      }
+    }
