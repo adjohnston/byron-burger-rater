@@ -1,0 +1,80 @@
+//  loading : modules
+//  -----------------
+
+//  keyframe
+//  --------
+    @keyframes loader {
+      0% {
+        -webkit-transform: scale(1);
+           -moz-transform: scale(1);
+                transform: scale(1);
+      }
+
+      30% {
+        -webkit-transform: scale(1.5);
+           -moz-transform: scale(1.5);
+                transform: scale(1.5);
+      }
+
+      100% {
+        -webkit-transform: scale(0.8);
+           -moz-transform: scale(0.8);
+                transform: scale(0.8);
+      }
+    }
+
+//  loading wrapper
+//  ---------------
+    .loading {
+      width:  100%;
+      height: 100%;
+      padding-top: gap();
+
+      background-color: rgba(white, 0.8);
+      
+      position: fixed;
+      top:  0;
+      left: 0;
+    }
+
+    //  loading - spinner
+    //  -----------------
+        .loading__spinner {
+          padding: gap();
+
+          text-align: center;
+        }
+
+        //  loading - spinner - item
+        //  ------------------------
+            .loading__spinner__item {
+              width:  gap(0.5);
+              height: gap(0.5);
+              margin-right: gap(0.25);
+
+              background-color: black;
+              border-radius: 50%;
+
+              display: inline-block;
+              vertical-align: top;
+
+              &:nth-child(1) {
+                animation: loader infinite 1s 0s;
+              }
+
+              &:nth-child(2) {
+                animation: loader infinite 1s 0.333s;
+              }
+
+              &:nth-child(3) {
+                animation: loader infinite 1s 0.666s;
+              }
+            }
+
+    //  loading - message
+    //  -----------------
+        .loading__message {
+          @include text-size(2);
+
+          text-align: center;
+        }

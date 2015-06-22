@@ -1,9 +1,9 @@
-//  index
+//  byron
 //  -----
 
 //  helpers
 //  -------
-    Template.index.helpers({
+    Template.byron.helpers({
       byrons: function () {
         return Byrons.find({}, {sort: {votes: -1}});
       },
@@ -16,16 +16,16 @@
 
 //  events
 //  ------
-    Template.index.events({
+    Template.byron.events({
       'click .vote__up': function (e, tmpl) {
-        var byronId = tmpl.$(e.target).parents('li').data('byron');
+        var _id = tmpl.$(e.target).parents('li').data('byron');
 
-        Meteor.call('castVote', byronId, 1);
+        Meteor.call('castVote', _id, 1);
       },
 
       'click .vote__down': function (e, tmpl) {
-        var byronId = tmpl.$(e.target).parents('li').data('byron');
+        var _id = tmpl.$(e.target).parents('li').data('byron');
 
-        Meteor.call('castVote', byronId, -1);
+        Meteor.call('castVote', _id, -1);
       }
     });

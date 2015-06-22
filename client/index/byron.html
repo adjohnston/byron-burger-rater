@@ -1,4 +1,4 @@
-<template name="index">
+<template name="byron">
 
 <main id="byrons" role="main">
   <ul class="byrons block-list">
@@ -11,10 +11,10 @@
         <span class="vote__down">&#9660;</span>
       </div>
 
-      <img class="byron__thumb" src="{{photo}}" alt="Byron">
+      <img class="byron__thumb" src="{{foursquare.photo}}" alt="Byron">
 
       <ul class="address">
-      {{#each address}}
+      {{#each foursquare.address}}
         
         {{> address line=this}}
       
@@ -24,7 +24,7 @@
 
   {{else}}
 
-    <li class="byron__loading">Restaurants are loading…</li>
+    {{> loading}}
 
   {{/each}}
   </ul>
