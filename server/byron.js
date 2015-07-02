@@ -45,21 +45,21 @@
             //  -----------------------------------------------
             var photos = HTTP.get('https://api.foursquare.com/v2/venues/' + byron.id + '/photos?limit=1&client_id=' + clientId + '&client_secret=' + clientSecret + '&v=20150612'),
                 photo  = photos.data.response.photos.items[0],
-                _id    = Byrons.findOne({byronId: byron.id});
+                _id    = Byrons.findOne({'foursquare.byronId': byron.id});
 
-            //  ----------------------------------------------------------
+            //  -----------------------------------------------------
             //  because I am looping over the returned data I only 
             //  want to insert new restaurants and using upsert 
-            //  seems to make the most sense. A suggestion by [username] 
-            //  on Meteor forums was to add the store id into a foursquare 
-            //  object incase I used a different method of populating the 
-            //  db.
-            //  ----------------------------------------------------------
+            //  seems to make the most sense. A suggestion by looshi
+            //  on Meteor forums was to add the store id into a 
+            //  foursquare object incase I used a different method of 
+            //  populating the db.
+            //  -----------------------------------------------------
             Byrons.upsert(_id, {$set: {
               foursquare: {
                 byronId: byron.id,
                 address: byron.location.formattedAddress,
-                photo:   (photo) ? photo.prefix + '150x150' + photo.suffix : null
+                photo:   (photo) ? photo.prefix + '150x150' + photo.suffix : undefined
               }
             }, $setOnInsert: {
               votes: 0,
