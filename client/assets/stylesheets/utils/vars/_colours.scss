@@ -17,9 +17,14 @@
 //  body
 //  ----
     $body-bg:         $white;
-    
+
     $body-text:       $dark-grey;
     $body-link:       lighten($dark-grey, 10%);
-    
+
     $body-text-light: $white;
     $body-link-light: darken($white, 10%);
+
+
+//  byron
+//  -----
+    $byron-border: darken($white, 5%);

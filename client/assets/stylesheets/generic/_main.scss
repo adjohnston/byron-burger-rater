@@ -17,6 +17,10 @@
 
       font-size:   $base-font-size;
       line-height: $base-line-height;
+
+      @include breakpoint($max: $tab) {
+        @include text-size(0.8);
+      }
     }
 
 //  body

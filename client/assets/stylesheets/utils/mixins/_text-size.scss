@@ -4,11 +4,15 @@
 
     @mixin text-size ($new-size: 1, $rel-mul: false) {
       @if (not $rel-mul) {
+
         $mul: (round($new-size * 4) / 4);
+
       } @elseif ($rel-mul) {
+
         $mul: $rel-mul;
+
       }
 
-      font-size:   ($base-font-size / $base-font-size) * $new-size + rem;
+      font-size:   1 * $new-size + rem;
       line-height: $base-line-height * $mul + rem;
     }
