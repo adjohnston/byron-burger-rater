@@ -23,6 +23,12 @@
           font-family: "didact gothic", "helvetica neue", helvetica, arial, sans-serif;
           text-transform: uppercase;
           letter-spacing: gap(-0.5);
+
+          @include breakpoint($max: $tab) {
+            @include text-size(6);
+
+            letter-spacing: 0;
+          }
         }
 
     //  splash __ subtitle
@@ -30,11 +36,16 @@
         .splash__subtitle {
           @include text-size(2);
 
-          margin-top:  gap(-5);
-          margin-left: gap(0.75);
+          margin-top:   gap(-5);
+          padding-left: gap(0.75);
 
           font-family: "didact gothic", "helvetica neue", helvetica, arial, sans-serif;
           text-transform: uppercase;
+
+          @include breakpoint($max: $tab) {
+            margin-top:   0;
+            padding-left: 0;
+          }
         }
 
 
@@ -45,6 +56,11 @@
 
           padding-left:  gap(0.75);
           padding-right: gap(0.75);
+
+          @include breakpoint($max: $tab) {
+            padding-right: 0;
+            padding-left:  0;
+          }
         }
 
 
@@ -59,6 +75,7 @@
 
           position: absolute;
           bottom: 0;
+          left:   0;
 
           display: block;
         }
