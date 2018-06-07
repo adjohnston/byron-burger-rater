@@ -4,26 +4,12 @@
     .byron {
       overflow: hidden;
 
-      @include breakpoint($max: $tab) {
-        margin-bottom: gap();
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-
       .vote, .byron__thumb, .address {
         float: left;
       }
 
       .address {
         width: calc(100% - #{gap(9)});
-
-        @include breakpoint($max: $tab) {
-          width: 100%;
-          padding-top:  gap();
-          padding-left: 0;
-        }
       }
     }
 
@@ -32,7 +18,7 @@
 //  ------
     footer {
       background-color: $white;
-
+      
       position: relative;
       z-index:  1;
 
